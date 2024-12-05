@@ -11,7 +11,7 @@ function UseMemoApp() {
   const [b, setB] = useState(1);
   const [count, setCount] = useState(0);  
 
-  const memoizedValue = useMemo(()=> expensiveSum(a,b));
+  const memoizedValue = useMemo(()=> expensiveSum(a,b),[a,b]);
 
   return (
     <div>
